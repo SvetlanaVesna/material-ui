@@ -8,11 +8,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _keyboardArrowUp = require('../svg-icons/hardware/keyboard-arrow-up');
+var _keyboardArrowUp = require('../svg-icons/navigation/arrow-drop-up');
 
 var _keyboardArrowUp2 = _interopRequireDefault(_keyboardArrowUp);
 
-var _keyboardArrowDown = require('../svg-icons/hardware/keyboard-arrow-down');
+var _keyboardArrowDown = require('../svg-icons/navigation/arrow-drop-down');
 
 var _keyboardArrowDown2 = _interopRequireDefault(_keyboardArrowDown);
 
