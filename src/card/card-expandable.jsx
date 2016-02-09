@@ -1,6 +1,6 @@
 import React from 'react';
-import OpenIcon from '../svg-icons/hardware/keyboard-arrow-up';
-import CloseIcon from '../svg-icons/hardware/keyboard-arrow-down';
+import HardwareKeyboardArrowUp from '../svg-icons/hardware/keyboard-arrow-up';
+import HardwareKeyboardArrowDown from '../svg-icons/hardware/keyboard-arrow-down';
 import IconButton from '../icon-button';
 import getMuiTheme from '../styles/getMuiTheme';
 import ContextPure from '../mixins/context-pure';
@@ -75,7 +75,7 @@ const CardExpandable = React.createClass({
         style={Object.assign(styles.root, this.props.style)}
         onTouchTap={this.props.onExpanding}
       >
-        {this.props.expanded ? <OpenIcon/> : <CloseIcon/>}
+        {this.props.expanded ? <HardwareKeyboardArrowUp/> : <HardwareKeyboardArrowDown/>}
       </IconButton>
     );
   },
