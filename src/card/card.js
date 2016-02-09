@@ -66,7 +66,11 @@ var Card = _react2.default.createClass({
     /**
      * Override the inline-styles of the root element.
      */
-    style: _react2.default.PropTypes.object
+    style: _react2.default.PropTypes.object,
+    /**
+    True when card is expanded
+    */
+    expand : _react2.default.PropTypes.bool
   },
 
   mixins: [_stylePropable2.default],
@@ -80,8 +84,11 @@ var Card = _react2.default.createClass({
   },
   getInitialState: function getInitialState() {
     return {
-      expanded: this.props.initiallyExpanded ? true : false
+      expanded: this.props.expand ? true : false
     };
+  },
+  componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext){
+    this._onExpandable;
   },
   _onExpandable: function _onExpandable(event) {
     event.preventDefault();
@@ -101,7 +108,7 @@ var Card = _react2.default.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (_this.state.expanded === false && currentChild.props.expandable === true) return;
+      if (_this.props.expand === false && currentChild.props.expandable === true) return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
         newProps.onTouchTap = _this._onExpandable;
