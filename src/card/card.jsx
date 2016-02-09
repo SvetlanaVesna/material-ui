@@ -42,6 +42,10 @@ const Card = React.createClass({
      * Override the inline-styles of the root element.
      */
     style: React.PropTypes.object,
+     /**
+    True when card is expanded
+    */
+    expand : _react2.default.PropTypes.bool
   },
 
   getDefaultProps() {
@@ -54,18 +58,20 @@ const Card = React.createClass({
 
   getInitialState() {
     return {
-      expanded: this.props.initiallyExpanded ? true : false,
+        expanded: this.props.expand ? true : false
     };
   },
 
   _onExpandable(event) {
     event.preventDefault();
-    let newExpandedState = !(this.state.expanded === true);
+    let newExpandedState = !(this.props.expand === true);
     this.setState({expanded: newExpandedState});
     if (this.props.onExpandChange)
       this.props.onExpandChange(newExpandedState);
   },
-
+  componentWillReceiveProps(nextProps, nextContext){
+    this._onExpandable;
+  },
   render() {
     let lastElement;
     let newChildren = React.Children.map(this.props.children, (currentChild) => {
@@ -76,7 +82,7 @@ const Card = React.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (this.state.expanded === false && currentChild.props.expandable === true)
+      if (this.props.expanded === false && currentChild.props.expandable === true)
         return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
@@ -85,7 +91,7 @@ const Card = React.createClass({
       }
       if (currentChild.props.showExpandableButton === true) {
         doClone = true;
-        newChild = <CardExpandable expanded={this.state.expanded} onExpanding={this._onExpandable}/>;
+        newChild = <CardExpandable expanded={this.props.expanded} onExpanding={this._onExpandable}/>;
       }
       if (doClone) {
         element = React.cloneElement(currentChild, newProps, currentChild.props.children, newChild);
