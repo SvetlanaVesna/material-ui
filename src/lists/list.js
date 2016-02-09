@@ -122,8 +122,8 @@ var List = _react2.default.createClass({
     var styles = {
       root: {
         padding: 0,
-        paddingBottom: 8,
-        paddingTop: subheader ? 0 : 8
+        paddingBottom: 0,
+        paddingTop: subheader ? 0 : 0
       },
 
       subheader: {

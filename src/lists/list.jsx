@@ -109,8 +109,8 @@ const List = React.createClass({
     const styles = {
       root: {
         padding: 0,
-        paddingBottom: 8,
-        paddingTop: hasSubheader ? 0 : 8,
+        paddingBottom: 0,
+        paddingTop: hasSubheader ? 0 : 0,
       },
     };
 

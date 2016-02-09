@@ -45,7 +45,7 @@ const Card = React.createClass({
      /**
     True when card is expanded
     */
-    expand : _react2.default.PropTypes.bool
+    expand : React.default.PropTypes.bool
   },
 
   getDefaultProps() {
