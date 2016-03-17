@@ -510,6 +510,7 @@ const Menu = React.createClass({
         opacity: 0,
         maxHeight: maxHeight,
         overflowY: maxHeight ? 'auto' : null,
+        boxShadow:'none'
       },
 
       selectedMenuItem: {
