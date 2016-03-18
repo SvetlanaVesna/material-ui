@@ -450,7 +450,8 @@ var ListItem = _react2.default.createClass({
 
     var styles = {
       root: {
-        backgroundColor: (this.state.isKeyboardFocused || this.state.hovered) && !this.state.rightIconButtonHovered && !this.state.rightIconButtonKeyboardFocused ? hoverColor : null,
+        backgroundColor: (this.state.isKeyboardFocused || this.state.hovered) 
+        && !this.state.rightIconButtonHovered && !this.state.rightIconButtonKeyboardFocused ? null : null,
         color: textColor,
         display: 'block',
         fontSize: 16,
