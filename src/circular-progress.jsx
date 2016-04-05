@@ -24,7 +24,7 @@ function getStyles(props, state) {
     },
   } = state.muiTheme;
 
-  const zoom = size * 1.4 ;
+  const zoom = size * 1.2 ;
   const baseSize = 50;
   let margin = Math.round( ((50 * zoom) - 50) / 2 );
 
