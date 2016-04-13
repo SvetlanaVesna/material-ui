@@ -89,7 +89,6 @@ var CardHeader = _react2.default.createClass({
   getStyles: function getStyles() {
     return {
       root: {
-        height: 72,
         padding: 16,
         fontWeight: _styles2.default.Typography.fontWeightMedium,
         boxSizing: 'border-box',

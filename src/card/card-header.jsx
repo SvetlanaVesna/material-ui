@@ -6,7 +6,6 @@ import typography from '../styles/typography';
 function getStyles(props) {
   return {
     root: {
-      height: 72,
       padding: 16,
       fontWeight: typography.fontWeightMedium,
       boxSizing: 'border-box',
