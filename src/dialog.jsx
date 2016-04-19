@@ -132,7 +132,7 @@ function getStyles(props, state) {
     },
     body: {
       padding: baseTheme.spacing.desktopGutter,
-      overflowY: autoScrollBodyContent ? 'auto' : 'hidden',
+      overflowY: 'auto',
       overflowX: 'hidden',
     },
     actionsContainer: {
