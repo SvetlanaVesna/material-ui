@@ -51,6 +51,7 @@ const Card = React.createClass({
   getDefaultProps() {
     return {
       expandable: false,
+      expand: false,
       initiallyExpanded: false,
       actAsExpander: false,
     };
@@ -58,13 +59,14 @@ const Card = React.createClass({
 
   getInitialState() {
     return {
-        expanded: this.props.expand ? true : false
+        expanded: this.props.expand ? true : false,
+        expand: this.props.expand ? true : false
     };
   },
 
   _onExpandable(event) {
     event.preventDefault();
-    let newExpandedState = !(this.props.expand === true);
+    let newExpandedState = !(this.state.expand === true);
     this.setState({expanded: newExpandedState});
     if (this.props.onExpandChange)
       this.props.onExpandChange(newExpandedState);
