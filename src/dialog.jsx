@@ -382,6 +382,7 @@ const DialogInline = React.createClass({
           show={open}
           className={overlayClassName}
           style={styles.overlay}
+          autoLockScrolling={false}
           onTouchTap={this._handleOverlayTouchTap}
         />
       </div>
