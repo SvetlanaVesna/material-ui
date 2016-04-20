@@ -132,6 +132,7 @@ function getStyles(props, state) {
     },
     body: {
       padding: baseTheme.spacing.desktopGutter,
+      overflow: 'auto',
       overflowY: 'auto',
       overflowX: 'auto',
     },
