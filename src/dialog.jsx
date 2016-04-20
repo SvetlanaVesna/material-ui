@@ -280,7 +280,7 @@ const DialogInline = React.createClass({
   },
 
   _requestClose(buttonClicked) {
-
+      document.body.style.overflow = "auto"
     if (!buttonClicked && this.props.modal) {
       return;
     }
@@ -288,7 +288,6 @@ const DialogInline = React.createClass({
     if (this.props.onRequestClose) {
       this.props.onRequestClose(!!buttonClicked);
     }
-    document.body.style.overflow = "auto"
   },
 
   _handleOverlayTouchTap() {
