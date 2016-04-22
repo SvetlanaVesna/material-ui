@@ -126,7 +126,7 @@ function getStyles(props, state) {
       transition: Transitions.easeOut(),
       position: 'relative',
       width: '75%',
-      maxWidth: baseTheme.spacing.desktopKeylineIncrement * 12,
+      // maxWidth: baseTheme.spacing.desktopKeylineIncrement * 12,
       margin: '0 auto',
       zIndex: zIndex.dialog,
     },
