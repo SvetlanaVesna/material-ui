@@ -88,7 +88,7 @@ const Card = React.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (this.props.expand == false && this.state.expanded == false && currentChild.props.expandable === true)
+      if (this.props.expand == false && currentChild.props.expandable === true)
         return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
