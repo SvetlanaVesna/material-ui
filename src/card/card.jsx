@@ -72,9 +72,10 @@ const Card = React.createClass({
       this.props.onExpandChange(newExpandedState);
   },
   componentWillReceiveProps(nextProps, nextContext){
-     this.setState({
-      expanded: nextProps.expand
-    })
+    //  this.setState({
+    //   expanded: nextProps.expand,
+    //   expand : nextProps.expand
+    // })
     this._onExpandable;
   },
   render() {
@@ -87,7 +88,7 @@ const Card = React.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (this.state.expanded == false && currentChild.props.expandable === true)
+      if (this.state.expanded == false && currentChild.props.expand == false && currentChild.props.expandable === true)
         return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
