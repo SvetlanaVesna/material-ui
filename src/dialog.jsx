@@ -126,7 +126,6 @@ function getStyles(props, state) {
       transition: Transitions.easeOut(),
       position: 'relative',
       width: '75%',
-      display: 'inline-block',
       // maxWidth: baseTheme.spacing.desktopKeylineIncrement * 12,
       margin: '0 auto',
       zIndex: zIndex.dialog,
@@ -136,6 +135,7 @@ function getStyles(props, state) {
       overflow: 'auto',
       overflowY: 'auto',
       overflowX: 'auto',
+      display: 'inline-block'
     },
     actionsContainer: {
       boxSizing: 'border-box',
