@@ -142,14 +142,15 @@ function getStyles(props, state) {
       padding: 8,
       marginBottom: 8,
       width: '100%',
-      textAlign: 'right',
-       display: 'inline-block'
+      textAlign: 'right'
     },
     paper: {
       background: baseTheme.palette.canvasColor,
+      display: 'inline-block'
     },
     overlay: {
       zIndex: zIndex.dialogOverlay,
+      display: 'inline-block'
     },
     title: {
       margin: 0,
