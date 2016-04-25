@@ -83,6 +83,9 @@ var Card = _react2.default.createClass({
     };
   },
   componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext){
+    this.setState({
+      expanded: nextProps.expand
+    })
     this._onExpandable;
   },
   getInitialState: function getInitialState() {
@@ -110,7 +113,7 @@ var Card = _react2.default.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if ((this.state.expanded === false || this.props.expand == false) && currentChild.props.expandable === true)return;
+      if (this.state.expanded == false && currentChild.props.expandable === true)return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
         newProps.onTouchTap = _this._onExpandable;
