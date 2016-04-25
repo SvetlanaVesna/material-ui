@@ -149,8 +149,7 @@ function getStyles(props, state) {
       display: 'inline-block'
     },
     overlay: {
-      zIndex: zIndex.dialogOverlay,
-      display: 'inline-block'
+      zIndex: zIndex.dialogOverlay
     },
     title: {
       margin: 0,
