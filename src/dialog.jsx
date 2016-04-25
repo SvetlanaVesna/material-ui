@@ -134,8 +134,7 @@ function getStyles(props, state) {
       padding: baseTheme.spacing.desktopGutter,
       overflow: 'auto',
       overflowY: 'auto',
-      overflowX: 'auto',
-      display: 'inline-block'
+      overflowX: 'auto'
     },
     actionsContainer: {
       boxSizing: 'border-box',
@@ -144,6 +143,7 @@ function getStyles(props, state) {
       marginBottom: 8,
       width: '100%',
       textAlign: 'right',
+       display: 'inline-block'
     },
     paper: {
       background: baseTheme.palette.canvasColor,
