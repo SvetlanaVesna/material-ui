@@ -145,8 +145,7 @@ function getStyles(props, state) {
       textAlign: 'right'
     },
     paper: {
-      background: baseTheme.palette.canvasColor,
-      display: 'inline-block'
+      background: baseTheme.palette.canvasColor
     },
     overlay: {
       zIndex: zIndex.dialogOverlay
