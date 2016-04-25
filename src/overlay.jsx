@@ -14,7 +14,7 @@ function getStyles(props) {
       opacity: 0,
       backgroundColor: Colors.lightBlack,
       WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-      display: "inline-block",
+      display: 'inline-block',
 
       // Two ways to promote overlay to its own render layer
       willChange: 'opacity',
