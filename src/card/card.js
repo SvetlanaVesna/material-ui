@@ -114,7 +114,7 @@ var Card = _react2.default.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (this.props.expanded == false && currentChild.props.expandable === true) return;
+      if (this.state.expanded == false && currentChild.props.expandable === true) return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
         newProps.onTouchTap = _this._onExpandable;
@@ -122,7 +122,7 @@ var Card = _react2.default.createClass({
       }
       if (currentChild.props.showExpandableButton === true) {
         doClone = true;
-        newChild = _react2.default.createElement(_cardExpandable2.default, { expanded: _this.props.expanded, onExpanding: _this._onExpandable });
+        newChild = _react2.default.createElement(_cardExpandable2.default, { expanded: _this.state.expanded, onExpanding: _this._onExpandable });
       }
       if (doClone) {
         element = _react2.default.cloneElement(currentChild, newProps, currentChild.props.children, newChild);
