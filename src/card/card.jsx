@@ -66,8 +66,8 @@ const Card = React.createClass({
 
   _onExpandable(event) {
     event.preventDefault();
-    this.setState({expanded : this.props.expanded})
-    let newExpandedState = !(this.state.expanded === true);
+    // this.setState({expanded : this.props.expanded})
+    let newExpandedState = !(this.props.expanded === true);
     this.setState({expanded: newExpandedState});
     if (this.props.onExpandChange)
       this.props.onExpandChange(newExpandedState);
