@@ -70,7 +70,7 @@ var Card = _react2.default.createClass({
     /**
     True when card is expanded
     */
-    expand : _react2.default.PropTypes.bool
+    expanded : _react2.default.PropTypes.bool
   },
 
   mixins: [_stylePropable2.default],
@@ -91,8 +91,8 @@ var Card = _react2.default.createClass({
   },
   getInitialState: function getInitialState() {
     return {
-              expanded: this.props.expand ? true : false,
-              expand: this.props.expand ? true : false
+              expanded: this.props.expanded ? true : false,
+              expand: this.props.expanded ? true : false
     };
   },
   _onExpandable(event) {
