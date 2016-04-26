@@ -97,7 +97,7 @@ const Card = React.createClass({
       }
       if (currentChild.props.showExpandableButton === true) {
         doClone = true;
-        newChild = <CardExpandable expanded={this.state.expanded} onExpanding={this._onExpandable}/>;
+        newChild = <CardExpandable expanded={this.props.expanded} onExpanding={this._onExpandable}/>;
       }
       if (doClone) {
         element = React.cloneElement(currentChild, newProps, currentChild.props.children, newChild);
