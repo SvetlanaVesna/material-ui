@@ -114,7 +114,7 @@ var Card = _react2.default.createClass({
       if (!currentChild || !currentChild.props) {
         return null;
       }
-      if (this.props.expand == false && currentChild.props.expandable === true) return;
+      if (this.props.expanded == false && currentChild.props.expandable === true) return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
         newProps.onTouchTap = _this._onExpandable;
