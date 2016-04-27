@@ -65,7 +65,7 @@ const Card = React.createClass({
 
   _onExpandable(event) {
     event.preventDefault();
-    this.setState({expanded : this.props.expanded})
+    
     let newExpandedState = !(this.state.expanded === true);
     this.setState({expanded: newExpandedState});
     if (this.props.onExpandChange)
@@ -75,6 +75,7 @@ const Card = React.createClass({
     this._onExpandable;
   },
   render() {
+    this.setState({expanded : this.props.expanded})
     let lastElement;
     let newChildren = React.Children.map(this.props.children, (currentChild) => {
       let doClone = false;
