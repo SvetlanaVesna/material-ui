@@ -83,6 +83,7 @@ var Card = _react2.default.createClass({
     };
   },
   componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext){
+        this.setState({expanded : nextProps.expanded})
     this._onExpandable;
   },
   getInitialState: function getInitialState() {
@@ -99,7 +100,6 @@ var Card = _react2.default.createClass({
   },
   render: function render() {
     var _this = this;
-    this.setState({expanded : _this.props.expanded})
     var lastElement = undefined;
     var newChildren = _react2.default.Children.map(this.props.children, function (currentChild) {
       var doClone = false;

@@ -72,10 +72,10 @@ const Card = React.createClass({
       this.props.onExpandChange(newExpandedState);
   },
   componentWillReceiveProps(nextProps, nextContext){
+    this.setState({expanded : nextProps.expanded})
     this._onExpandable;
   },
   render() {
-    this.setState({expanded : this.props.expanded})
     let lastElement;
     let newChildren = React.Children.map(this.props.children, (currentChild) => {
       let doClone = false;
