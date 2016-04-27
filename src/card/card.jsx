@@ -89,7 +89,7 @@ const Card = React.createClass({
         return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
-        newProps.onTouchTap = this._onExpandable;
+        newProps.onClick = this._onExpandable;
         newProps.style = Object.assign({cursor: 'pointer'}, currentChild.props.style);
       }
       if (currentChild.props.showExpandableButton === true) {

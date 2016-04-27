@@ -116,7 +116,7 @@ var CardExpandable = _react2.default.createClass({
       _iconButton2.default,
       {
         style: mergedStyles,
-        onTouchTap: this.props.onExpanding
+        onClick: this.props.onExpanding
       },
       expandable
     );

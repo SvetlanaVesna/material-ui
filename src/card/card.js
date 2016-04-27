@@ -112,7 +112,7 @@ var Card = _react2.default.createClass({
       if (this.state.expanded == false && currentChild.props.expandable === true) return;
       if (currentChild.props.actAsExpander === true) {
         doClone = true;
-        newProps.onTouchTap = _this._onExpandable;
+        newProps.onClick = _this._onExpandable;
         newProps.style = _this.mergeStyles({ cursor: 'pointer' }, currentChild.props.style);
       }
       if (currentChild.props.showExpandableButton === true) {
