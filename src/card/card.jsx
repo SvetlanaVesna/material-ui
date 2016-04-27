@@ -72,7 +72,6 @@ const Card = React.createClass({
       this.props.onExpandChange(newExpandedState);
   },
   componentWillReceiveProps(nextProps, nextContext){
-    this.setState({expanded : nextProps.expanded})
     this._onExpandable;
   },
   render() {
