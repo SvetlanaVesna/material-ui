@@ -87,8 +87,7 @@ var Card = _react2.default.createClass({
   },
   getInitialState: function getInitialState() {
     return {
-              expanded: this.props.expanded ? true : false,
-              expand: this.props.expanded ? true : false
+              expanded: this.props.expanded ? true : false
     };
   },
   _onExpandable(event) {

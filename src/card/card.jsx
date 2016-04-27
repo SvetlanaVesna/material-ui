@@ -59,8 +59,7 @@ const Card = React.createClass({
 
   getInitialState() {
     return {
-        expanded: this.props.expanded ? true : false,
-        expand: this.props.expanded ? true : false
+        expanded: this.props.expanded ? true : false
     };
   },
 
